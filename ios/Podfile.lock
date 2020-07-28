@@ -13,6 +13,9 @@ PODS:
     - ReactCommon/turbomodule/core (= 0.63.2)
   - Firebase/Analytics (6.27.1):
     - Firebase/Core
+  - Firebase/Auth (6.27.1):
+    - Firebase/CoreOnly
+    - FirebaseAuth (~> 6.6.0)
   - Firebase/Core (6.27.1):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.6.2)
@@ -27,6 +30,11 @@ PODS:
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 1.30905.0)
+  - FirebaseAuth (6.6.0):
+    - FirebaseCore (~> 6.8)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.5)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (6.8.1):
     - FirebaseCoreDiagnostics (~> 1.3)
     - GoogleUtilities/Environment (~> 6.5)
@@ -124,6 +132,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.7.1):
     - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.4.0)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -366,6 +375,10 @@ PODS:
   - RNFBApp (8.2.0):
     - Firebase/CoreOnly (~> 6.27.0)
     - React
+  - RNFBAuth (8.2.0):
+    - Firebase/Auth (~> 6.27.0)
+    - React
+    - RNFBApp
   - RNGestureHandler (1.7.0):
     - React
   - RNReanimated (1.10.1):
@@ -429,6 +442,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
+  - "RNFBAuth (from `../node_modules/@react-native-firebase/auth`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -442,6 +456,7 @@ SPEC REPOS:
     - CocoaLibEvent
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseInstallations
@@ -455,6 +470,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - GTMSessionFetcher
     - nanopb
     - OpenSSL-Universal
     - PromisesObjC
@@ -517,6 +533,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/masked-view"
   RNFBApp:
     :path: "../node_modules/@react-native-firebase/app"
+  RNFBAuth:
+    :path: "../node_modules/@react-native-firebase/auth"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
@@ -537,6 +555,7 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: dc7fa9088f0f2a998503a352b0554d69a4391c5a
   Firebase: 919186c8e119dd9372a45fd1dd17a8a942bc1892
   FirebaseAnalytics: 5fa308e1b13f838d0f6dc74719ac2a72e8c5afc4
+  FirebaseAuth: b85c064e0ac60f82486728d50a4803f235687302
   FirebaseCore: 8cd4f8ea22075e0ee582849b1cf79d8816506085
   FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
   FirebaseInstallations: 3c520c951305cbf9ca54eb891ff9e6d1fd384881
@@ -552,6 +571,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 8cd1f289d60e629cf16ab03363b9e89c776b9651
   GoogleDataTransport: 8a40cb194ad242b6f6dfe72c14fe40fc67c4dcd7
   GoogleUtilities: e121a3867449ce16b0e35ddf1797ea7a389ffdf2
+  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
@@ -578,6 +598,7 @@ SPEC CHECKSUMS:
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNFBApp: 6fd8a7e757135d4168bf033a8812c241af7363a0
+  RNFBAuth: 82b94c2f0a851be529a19f5fda2dffb390bfdd7f
   RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
   RNReanimated: c2bb7438b57a3d987bb2e4e6e4bca94787e30b02
   RNScreens: c526239bbe0e957b988dacc8d75ac94ec9cb19da
@@ -585,6 +606,6 @@ SPEC CHECKSUMS:
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 12cc2eee6a840d44f453e1eecccb064acb81e293
+PODFILE CHECKSUM: 0e9214c7ca2669fc3c8ccd7577dbdb1db7e9b1d5
 
 COCOAPODS: 1.9.3
