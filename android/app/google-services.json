@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "389541925721",
+    "firebase_url": "https://listha-app.firebaseio.com",
+    "project_id": "listha-app",
+    "storage_bucket": "listha-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389541925721:android:88b8495c838fc234767248",
+        "android_client_info": {
+          "package_name": "com.pius.listha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389541925721-sjbisqml4cgt6qg7g4iou798rpq26u74.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeR7t4QOTTXUsXtB-0TK_Mvo2XfTfid0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389541925721-sjbisqml4cgt6qg7g4iou798rpq26u74.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

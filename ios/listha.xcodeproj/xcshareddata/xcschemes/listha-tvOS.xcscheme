@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "mylistha-tvOS.app"
-               BlueprintName = "mylistha-tvOS"
-               ReferencedContainer = "container:mylistha.xcodeproj">
+               BuildableName = "listha-tvOS.app"
+               BlueprintName = "listha-tvOS"
+               ReferencedContainer = "container:listha.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "mylistha-tvOSTests.xctest"
-               BlueprintName = "mylistha-tvOSTests"
-               ReferencedContainer = "container:mylistha.xcodeproj">
+               BuildableName = "listha-tvOSTests.xctest"
+               BlueprintName = "listha-tvOSTests"
+               ReferencedContainer = "container:listha.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "mylistha-tvOS.app"
-            BlueprintName = "mylistha-tvOS"
-            ReferencedContainer = "container:mylistha.xcodeproj">
+            BuildableName = "listha-tvOS.app"
+            BlueprintName = "listha-tvOS"
+            ReferencedContainer = "container:listha.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "mylistha-tvOS.app"
-            BlueprintName = "mylistha-tvOS"
-            ReferencedContainer = "container:mylistha.xcodeproj">
+            BuildableName = "listha-tvOS.app"
+            BlueprintName = "listha-tvOS"
+            ReferencedContainer = "container:listha.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
