@@ -8,22 +8,6 @@ import AuthRoutes from './routes';
 import colors from '../colors';
 
 const App: React.FC = () => {
-  const [initializing, setInitializing] = useState(true);
-  const [user, setUser] = useState();
-
-  // Handle user state changes
-  function onAuthStateChanged(user) {
-    setUser(user);
-    if (initializing) setInitializing(false);
-  }
-
-  useEffect(() => {
-    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
-    return subscriber; // unsubscribe on unmount
-  }, []);
-
-  if (initializing) return <SafeAreaView style={{flex: 1}}><Text>Loading</Text></SafeAreaView>;
-
   return (
     <NavigationContainer>
       <StatusBar barStyle="light-content" backgroundColor={colors.background} />

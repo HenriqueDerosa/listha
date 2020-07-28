@@ -7,8 +7,10 @@ import {
   Platform,
   View,
   TextInput,
+  Alert,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {FirebaseAuthTypes} from '@react-native-firebase/auth';
 
 import Icon from 'react-native-vector-icons/Feather';
 import Input from '../../components/Input';
@@ -28,6 +30,8 @@ import colors from '../../../colors';
 import {ScrollView} from 'react-native-gesture-handler';
 import {Form} from '@unform/mobile';
 import {FormHandles} from '@unform/core';
+import * as auth from '../../services/auth';
+import {getError} from '../../config/firebase';
 
 const SignIn: React.FC = () => {
   const navigation = useNavigation();
@@ -57,9 +61,14 @@ const SignIn: React.FC = () => {
     setShowCreateAccount(true);
   };
 
-  const handleSignIn = useCallback((data: object) => {
-    console.log(data);
-    navigation.navigate('Lists');
+  const handleSignIn = useCallback(async (data: auth.IAuth) => {
+    const hasErrors = await auth.signIn(data.email, data.password);
+
+    if (!hasErrors) {
+      navigation.navigate('Lists');
+    } else {
+      Alert.alert('Erro', getError(String(hasErrors)));
+    }
   }, []);
 
   const handlePressCreate = useCallback(() => {
