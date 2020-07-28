@@ -21,7 +21,7 @@ const screenOptions: StackNavigationOptions = {
 };
 
 const AuthRoutes: React.FC = () => (
-  <Auth.Navigator screenOptions={screenOptions} initialRouteName="SignIn">
+  <Auth.Navigator screenOptions={screenOptions} initialRouteName="Lists">
     <Auth.Screen name="SignIn" component={SignIn} />
     <Auth.Screen name="SignUp" component={SignUp} />
     <Auth.Screen name="Lists" component={Lists} />
